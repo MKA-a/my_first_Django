@@ -1,0 +1,64 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+
+{% block titel %}
+	Iphone
+{% endblock %}
+
+
+	{% block main %}
+	 	<div class="row w-100 p-4">
+			<div class="col-md-3">
+				<img class="img-fluid" src="{% static 'img/iphone-x-64_1.jpg' %}">
+			</div>
+
+			<div class="col-md-3">
+				<table class="table table_set">
+				  <tbody>
+				  	{% for i in charectiristic_1 %}
+						{% for value, key in i.items%}
+							<tr>
+						      <th scope="row">{{value}}</th>
+						      <td>{{key}}</td>
+						    </tr>
+				    	{% endfor %}
+					{% endfor %}
+				  </tbody>
+				</table>
+			</div>
+
+			<div class="col-md-3">
+				<img class="img-fluid" src="{% static 'img/iphone-x-64_2.jpg' %}">
+			</div>
+
+			<div class="col-md-3">
+				<table class="table table_set">
+				  <tbody>
+				  	{% for i in charectiristic_2 %}
+						{% for value, key in i.items%}
+							<tr>
+						      <th scope="row">{{value}}</th>
+						      <td>{{key}}</td>
+						    </tr>
+				    	{% endfor %}
+					{% endfor %}
+				  </tbody>
+				</table>
+				<div class="dropdown">
+					  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Купить
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					    <a class="dropdown-item" href="#">64Гб</a>
+					    <a class="dropdown-item" href="#">128Гб</a>
+					    <a class="dropdown-item" href="#">256Гб</a>
+					  </div>
+					</div>
+			</div>
+		</div>
+	
+	{% endblock %}
+
+	{% block script %}
+	<script type="text/javascript" src="https://unpkg.com/popper.js"></script>
+	{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+
+{% block titel %}
+	Контакты
+{% endblock %}
+
+	
+	{% block nav_contact %}
+	    <li class="nav-item active">
+	{% endblock %}
+
+
+	{% block main %}
+		<div class="background_shop">
+			<div class="row p-4">
+				<div class="col-md-8">
+					<a 
+						href="https://yandex.ru/maps/?um=constructor%3Aad15d12e38685c0a2b0a27859791b48c0fa7322c19b36438fe03e707fcac15e7&amp;
+						source=constructorStatic" target="_blank">
+						<img class="map" src="https://api-maps.yandex.ru/services/constructor/1.0/static/
+						?um=constructor%3Aad15d12e38685c0a2b0a27859791b48c0fa7322c19b36438fe03e707fcac15e7&amp;width=600&amp;height=400&amp;
+						lang=ru_RU" alt="" style="border: 0;" />
+					</a>
+				</div>
+				<div class=" col-xs-12 col-md-6 col-lg-4 p-4">
+		    		<form action="#" class="contact-form" method="post">
+				        <div class="form-group">
+				          <input type="text" class="form-control" id="name" name="nm" placeholder="Имя" required="" autofocus="">
+				        </div>
+				        <div class="form-group form_left">
+				          <input type="email" class="form-control" id="email" name="em" placeholder="Почта" required="">
+				        </div>
+				      <div class="form-group">
+				           <input type="text" class="form-control" id="phone"  maxlength="12" placeholder="Мобильный телефон" required="">
+				      </div>
+				      <div class="form-group">
+				      	<textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Текст" required=""></textarea>
+				      	<br>
+			      	  	<button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Отправить </button>
+				      </div>
+		     		</form>
+		     	</div>
+			</div>
+
+
+
+			<div class="container second-portion contact_color">
+				<div class="row">
+			    	<div class="col-xs-12 col-sm-6 col-lg-4">
+						<div class="box">							
+							<div class="icon">
+								<h3 class="title">Почта и сайт</h3>
+								<p>
+									<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp Xpamoushop@gmail.com
+									<br>
+									<br>
+									<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.Xshop.com
+								</p>
+							</div>
+						</div> 
+					</div>
+						
+			        <div class="col-xs-12 col-sm-6 col-lg-4">
+						<div class="box">							
+							<div class="icon">
+								<h3 class="title">Телефон</h3>
+		    					<p>
+									<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+7)-495-112-XX-XX
+									<br>
+									<br>
+									<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+7)-952-423-XX-XX
+								</p>
+							</div>
+						</div> 
+					</div>
+						
+			        <div class="col-xs-12 col-sm-6 col-lg-4">
+						<div class="box">							
+							<div class="icon">
+								<h3 class="title">Адрес</h3>
+		    					<p>
+									 <i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: 158923 Москва, Саратовская улица, 7к2
+								</p>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endblock %}

@@ -1,0 +1,105 @@
+body {
+	background-color: #f2f2f2;
+}
+li{
+    list-style-type: none; /* Убираем маркеры */
+}
+a{
+	color: grey;
+	text-decoration: none;
+}
+a:hover {
+    color: #d53e07;
+}
+.navbar{
+	font-weight: 700; 
+	font-size: 20px;
+}
+.marketing{
+	margin: 40px;
+	margin-left: 150px; 
+}
+.foot{
+	text-decoration-color: red;
+	padding: 15px;
+}
+.map{
+	padding: 10px;
+}
+.dropdown-menu{
+	padding-left: 10px;
+}
+.background_shop{
+	background-image: url(../img/Store.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.contact_color{
+	color: #000000;
+	font-weight: 700; 
+}
+.auto_text_2{
+	color: black;
+}
+.carousel-inner img {
+  height: 500px !important;
+  margin: 0 auto;
+}
+.carousel-indicators .active {
+  background-color: #d53e07;
+}
+.price{
+	font-weight: 700;
+}
+.table_set{
+	font-weight: 100;
+}
+.orange{
+    color: #d53e07;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  right: 0;
+  height: 520px;
+  width: 340px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.85);
+}
+.container_cover:hover .overlay {
+  opacity: 1;
+}
+.text_cover {
+  color:  #d53e07;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.time{
+  font-size: 20px;
+  color: #6c757d;
+}
+#video_bg {
+  /* Делаем так, чтобы видеофон занимал фиксированное положение. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Располагаем наш фон под всем содержимым на странице.
+    Для этого используем отрицательный z-index. */
+  z-index: -1000;
+  /* Растягиваем видео так, чтобы не было видно черных полос и
+  чтобы независимо от разрешения экрана видеофон занимал все рабочее пространство. */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}

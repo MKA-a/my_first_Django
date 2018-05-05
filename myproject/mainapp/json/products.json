@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Iphone X",
+        "price": "30000",
+		"category": "Apple"
+    },
+	{
+        "name": "S6",
+        "price": "27000",
+		"category": "Sumsung"
+    },
+	{
+        "name": "OnePlus One",
+        "price": "25000",
+		"category": "OnePlus"
+    }
+]

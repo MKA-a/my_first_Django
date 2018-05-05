@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Apple",
+        "desc": "Продукция фирмы APPLE."
+    },
+    {
+        "name": "OnePlus",
+        "desc": "Продукция фирмы OnePlus."
+    },
+    {
+        "name": "Sumsung",
+        "desc": "Продукция фирмы Sumsung."
+    }
+]
