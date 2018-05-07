@@ -95,12 +95,12 @@
 		  			<div class="marketing">
 				      <div class="row">
 				      	{% for marketings in marketingNew %}
-					        <div class="col-lg-4">
+					        <div class="col-xs-12 col-sm-6 col-lg-4">
 						        <a href="#">
-						            <img class="img-fluid rounded-circle" src="{{marketings.img.url}}" alt="{{marketings.name}}" width="340" height="340">
+						            <img class="img-fluid rounded-circle" src="{{marketings.img_1.url}}" alt="{{marketings.name}}" width="340" height="340">
 						        </a>
 					            <h2>{{marketings.name}}</h2>
-					            <p>{{marketings.desc}}</p>
+					            <p>{{marketings.short_desc}}</p>
 					            <p><a class="btn btn-secondary" href="#" role="button">Детали &raquo;</a></p>
 					        </div>
 				        {% endfor %}
@@ -109,15 +109,15 @@
 			    </div>
 
 			    <div class="tab-pane" id="popular">
-				    <div class="marketings">
+				    <div class="marketing">
 				      <div class="row">
 				        {% for marketingsPopular in marketingPopular %}
-					        <div class="col-lg-4">
+					        <div class="col-xs-12 col-sm-6 col-lg-4">
 						        <a href="#">
-						            <img class="img-fluid rounded-circle" src="{{marketingsPopular.img.url}}" alt="{{marketingsPopular.name}}" width="340" height="340">
+						            <img class="img-fluid rounded-circle" src="{{marketingsPopular.img_1.url}}" alt="{{marketingsPopular.name}}" width="340" height="340">
 						        </a>
 					            <h2>{{marketingsPopular.name}}</h2>
-					            <p>{{marketingsPopular.desc}}</p>
+					            <p>{{marketingsPopular.short_desc}}</p>
 					            <p><a class="btn btn-secondary" href="#" role="button">Детали &raquo;</a></p>
 					        </div>
 				        {% endfor %}
@@ -125,13 +125,13 @@
 				    </div>			
 				</div>
 
-			    <div class="tab-pane" id="sale">
-			  	<div class="marketings">
+<!-- 			    <div class="tab-pane" id="sale">
+			  	<div class="marketing">
 				      <div class="row">
 				        {% for marketingsSale in marketingSale %}
-					        <div class="col-lg-4">
+					        <div class="col-xs-12 col-sm-6 col-lg-4">
 						        <a href="#">
-						            <img class="img-fluid rounded-circle" src="{{marketingsSale.img.url}}" alt="{{marketingsSale.name}}" width="340" height="340">
+						            <img class="img-fluid rounded-circle" src="{{marketingsSale_1.img.url}}" alt="{{marketingsSale.name}}" width="340" height="340">
 						        </a>
 					            <h2>{{marketingsSale.name}}</h2>
 					            <p>{{marketingsSale.desc}}</p>
@@ -140,7 +140,7 @@
 				        {% endfor %}
 				      </div>
 				    </div>
-			    </div>
+			    </div> -->
 			</div>
 	{% endblock %}
 

@@ -22,17 +22,17 @@ class Command(BaseCommand):
             new_category = Category(**category)
             new_category.save()
 
-        products = loadFromJSON('products')
-
-        Product.objects.all().delete()
-        for product in products:
-            category_name = product["category"]
-            # Получаем категорию по имени
-            _category = Category.objects.get(name=category_name)
-            # Заменяем название категории объектом
-            product['category'] = _category
-            new_product = Product(**product)
-            new_product.save()
+        # products = loadFromJSON('products')
+        #
+        # Product.objects.all().delete()
+        # for product in products:
+        #     category_name = product["category"]
+        #     # Получаем категорию по имени
+        #     _category = Category.objects.get(name=category_name)
+        #     # Заменяем название категории объектом
+        #     product['category'] = _category
+        #     new_product = Product(**product)
+        #     new_product.save()
 
         # Создаем суперпользователя при помощи менеджера модели
-        super_user = ShopUser.objects.create_superuser('django', 'django@geekshop.local', 'geekbrains')
+        # super_user = ShopUser.objects.create_superuser('django', 'django@geekshop.local', 'geekbrains')

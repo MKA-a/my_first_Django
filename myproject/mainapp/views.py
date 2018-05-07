@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from datetime import datetime
 from django.shortcuts import get_object_or_404
 from .models import *
 
@@ -7,19 +6,15 @@ from .models import *
 # Create your views here.
 def index_view(request):
     products = Product.objects.all()
-    now_time = datetime.now()
-    marketing_new = MarketingNew.objects.all()
-    marketing_popular = MarketingPopular.objects.all()
-    marketing_sale = MarketingSale.objects.all()
-    product_img = ProductImg.objects.all()
+    marketing_new = Product.objects.filter(marketing__startswith=1)
+    marketing_popular = Product.objects.filter(marketing__startswith=2)
+    # marketing_sale = Product.objects.filter(marketing_startswith=3)
 
     content = {
-        'now_time': now_time,
         'products': products,
         'marketingNew': marketing_new,
         'marketingPopular': marketing_popular,
-        'marketingSale': marketing_sale,
-        'product_img': product_img
+        # 'marketingSale': marketing_sale
     }
     return render(request, 'mainapp/index.html', content)
 
@@ -29,7 +24,12 @@ def contats_view(request):
 
 
 def catalog_apple(request):
-    return render(request, 'mainapp/catalog/apple.html')
+    products_apple = Product.objects.filter(category__pk=1)
+
+    content = {
+        'products_apple': products_apple
+    }
+    return render(request, 'mainapp/catalog/apple.html', content)
 
 
 def iphone_x(request):
